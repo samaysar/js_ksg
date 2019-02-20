@@ -1,0 +1,52 @@
+{
+  "name": "js_ksg",
+  "version": "1.0.0",
+  "description": "ksg js project",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "build": "./node_modules/.bin/webpack",
+    "start": "npm run compile && npm run build && node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samaysar/js_ksg.git"
+  },
+  "keywords": [],
+  "author": "Divya Sarthi MAHESHWARI",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/samaysar/js_ksg/issues"
+  },
+  "homepage": "https://github.com/samaysar/js_ksg#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "express": "^4.16.4",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "semantic-ui-css": "^2.4.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/react": "^16.8.4",
+    "@types/react-dom": "^16.8.2",
+    "@types/webpack-env": "^1.13.7",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "semantic-ui-react": "^0.85.0",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-middleware": "^3.6.0",
+    "webpack-hot-middleware": "^2.24.3"
+  }
+}
