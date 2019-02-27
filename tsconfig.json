@@ -6,6 +6,7 @@
         "moduleResolution": "node",
         "strict": true,
         "noEmit": true,
+        "noImplicitAny": false,
         "noImplicitReturns": true,
         "preserveConstEnums": true,
         "noUnusedLocals": true,
@@ -15,7 +16,7 @@
         "target": "ESNext"
     },
     "include": [
-        "./src/**/*"
+        "src"
     ],
     "exclude": [
         "node_modules"

@@ -1,4 +1,4 @@
-export default function (api) {
+module.exports = function (api) {
     api.cache(true);
 
     const presets = [
@@ -18,8 +18,11 @@ export default function (api) {
         ]
     ];
     const plugins = [
-        "@babel/proposal-class-properties",
-        "@babel/proposal-object-rest-spread"
+        "relay",
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-transform-classes",
+        "@babel/plugin-proposal-object-rest-spread",
+        "@babel/plugin-proposal-async-generator-functions"
     ];
 
     return {
