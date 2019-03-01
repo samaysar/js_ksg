@@ -1,6 +1,10 @@
 import * as React from 'react';
-import { Header } from 'semantic-ui-react';
+import { Route, Switch } from 'react-router-dom';
+import Login from './prelogin/Login';
+import Consts from '../helpers/consts';
 
 export default class App extends React.Component<{}>{
-    render = () => <Header size='huge'>Huge Header</Header>;
+    render = () => <Switch>
+        <Route path={Consts.CatchAllUrl} component={Login} />
+    </Switch>;
 }

@@ -5,13 +5,18 @@ const path = require('path'),
 module.exports = {
     mode: 'development',
     target: 'node',
+    node: {
+        __dirname: false,
+        __filename: false
+    },
     entry: {
         app: ['./src/Index.tsx', 'webpack-hot-middleware/client'],
         vendor: ['react', 'react-dom']
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].bundle.js'
+        filename: 'js/[name].bundle.js',
+        publicPath: '/'
     },
     devtool: 'source-map',
     resolve: {
