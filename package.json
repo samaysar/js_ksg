@@ -6,8 +6,6 @@
   "scripts": {
     "compile": "tsc",
     "buildclient": "./node_modules/.bin/webpack --config webpack.config.js",
-    "buildserver": "webpack --config webpack.config.node.js",
-    "relay": "relay-compiler --src ./src --schema ./schema.graphql -extensions js jsx ts tsx --watch",
     "start": "npm run compile && npm run buildclient && node ./src/server/Main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -52,13 +50,10 @@
     "@types/webpack-env": "^1.13.7",
     "@types/webpack-hot-middleware": "^2.16.5",
     "babel-loader": "^8.0.5",
-    "babel-plugin-relay": "^3.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "concurrently": "^4.1.0",
     "css-loader": "^2.1.0",
-    "graphql": "^14.1.1",
     "html-webpack-plugin": "^3.2.0",
-    "relay-compiler": "^3.0.0",
     "sass-loader": "^7.1.0",
     "semantic-ui-react": "^0.85.0",
     "source-map-loader": "^0.2.4",

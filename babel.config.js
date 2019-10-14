@@ -18,7 +18,6 @@ module.exports = function (api) {
         ]
     ];
     const plugins = [
-        "relay",
         "@babel/plugin-proposal-class-properties",
         "@babel/plugin-transform-classes",
         "@babel/plugin-proposal-object-rest-spread",
