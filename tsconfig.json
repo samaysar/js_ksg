@@ -2,7 +2,7 @@
     "compilerOptions": {
         "jsx": "react",
         "jsxFactory": "React.createElement",
-        "module": "commonjs",
+        "module": "CommonJS",
         "moduleResolution": "node",
         "strict": true,
         "noEmit": true,
@@ -15,9 +15,6 @@
         "sourceMap": true,
         "target": "ESNext"
     },
-    "include": [
-        "src"
-    ],
     "exclude": [
         "node_modules"
     ]
