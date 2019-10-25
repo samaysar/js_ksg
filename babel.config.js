@@ -8,10 +8,11 @@ module.exports = function (api) {
             "@babel/env",
             {
                 targets: {
-                    edge: "17",
-                    firefox: "60",
-                    chrome: "67",
-                    safari: "11.1"
+                    "browsers":[
+                        ">0.25%",
+                        "not ie 11",
+                        "not op_mini all"
+                    ]
                 },
                 useBuiltIns: "usage",
                 corejs: 3
@@ -19,10 +20,8 @@ module.exports = function (api) {
         ]
     ];
     const plugins = [
-        "@babel/plugin-transform-arrow-functions",
-        "@babel/plugin-proposal-object-rest-spread",
-        "@babel/plugin-proposal-class-properties",
-        "react-hot-loader/babel"
+        "react-hot-loader/babel",
+        "@babel/plugin-proposal-class-properties"
     ];
 
     return {

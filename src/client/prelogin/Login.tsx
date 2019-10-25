@@ -3,6 +3,6 @@ import { RouteProps } from 'react-router-dom';
 
 export default class Login extends React.Component<RouteProps, {}>{
     render = () => {
-        return <h1>HELLOs</h1>;
+        return <h1>HELLO</h1>;
     }
 }
