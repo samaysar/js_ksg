@@ -1,18 +1,28 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import 'semantic-ui-css/semantic.min.css';
-import { Container } from 'semantic-ui-react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import './fa/css/all.min.css';
 import App from './client/App';
+import { setConfig } from 'react-hot-loader';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
 
-const render = () => {
+library.add(fab, faCheckSquare, faCoffee);
+setConfig({
+    showReactDomPatchNotification: false
+});
+
+const render = (Compo: React.ComponentClass) => {
     ReactDOM.render(
         <BrowserRouter>
-            <Container>
-                <App />
-            </Container>
+            <Compo />
+            <FontAwesomeIcon icon={["fab", "react"]}  size='10x' spin color='rgb(59, 91, 152)'/>
+            <FontAwesomeIcon icon="coffee" size='10x' spin/>
         </BrowserRouter>,
         document.getElementById('root'));
 }
 
-render();
+render(App);

@@ -6,7 +6,7 @@ module.exports = {
     mode: 'development',
     target: 'web',
     entry: {
-        app: ['./src/Index.tsx']
+        app: ['react-hot-loader/patch', './src']
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
